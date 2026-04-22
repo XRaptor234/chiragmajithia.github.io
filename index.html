@@ -99,6 +99,23 @@
             <div class="orbit-item">
                 <div class="orbit-marker"></div>
                 <div class="card">
+                    /* Inside your <style> block */
+.career-img {
+    width: 100%;
+    height: 280px;      /* This keeps all three photos the same height */
+    object-fit: cover;  /* This prevents the photos from looking squashed */
+    border-radius: 12px;
+    margin-top: 20px;
+    filter: grayscale(40%); /* Gives it that cool space-age aesthetic */
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.career-img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+    border-color: var(--nebula-purple);
+}
                     <span style="color: var(--nebula-purple); font-weight: bold;">March 7, 2023 - February 13, 2026</span>
                     <h3>Associate, Digital Marketing @ Sterling Wells Pvt. Ltd</h3>
                     <p>Worked in content strategist and explored AI and its uses in professional fields.</p>
