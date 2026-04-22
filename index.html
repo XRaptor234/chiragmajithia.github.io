@@ -53,6 +53,26 @@
             transform: scale(1.02); 
             border-color: var(--nebula-purple); 
         }
+        /* This is for your specific square, full-view image */
+.career-img-square {
+    width: 300px;           /* Set a specific width */
+    height: 300px;          /* Set the same height to make it a perfect square */
+    object-fit: contain;    /* This ensures the FULL image is visible without cropping */
+    background: rgba(255,255,255,0.05); /* Adds a subtle backing in case the photo is thin */
+    border-radius: 12px;
+    margin: 20px auto;      /* Centers the square */
+    display: block;         /* Necessary for centering */
+    filter: grayscale(40%);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.career-img-square:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+    border-color: var(--nebula-purple);
+}
+        
         /* Timeline / Orbit */
         .orbit-container { border-left: 2px dashed var(--nebula-purple); margin: 20px 0 20px 20px; padding-left: 40px; }
         .orbit-item { position: relative; margin-bottom: 40px; }
@@ -134,7 +154,7 @@
                     <span style="color: var(--nebula-purple); font-weight: bold;">2019 - 2024</span>
                     <h3>Mock UN Trainer for Model UNs across 13 countries</h3>
                     <p>Trained students from school levels to Phd students on UN affairs and conducted Mock Sessions</p>
-                    <img src="mun.png" alt="Career Image 3" class="career-img">
+                    <img src="mun.png" alt="Full Image View" class="career-img-square">
                     </div>
                </div>
             </div>
