@@ -139,6 +139,30 @@
 
         header { text-align: center; padding: 60px 0; }
         h1 { font-size: 3rem; background: linear-gradient(to right, #fff, var(--nebula-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    /* --- THE MOBILE COMMAND CENTER --- */
+@media (max-width: 768px) {
+    
+    /* This tames the square image so it doesn't leak out of the card */
+    .career-img {
+        max-width: 100%;  /* Ensures it never gets wider than the screen */
+        height: auto;     /* Keeps the image from stretching */
+        display: block;
+        margin: 0 auto 15px auto; /* Centers it and adds space below */
+    }
+
+    /* This ensures your cards (Career Orbit, VibeCode, etc.) don't overflow */
+    .card, .career-item {
+        padding: 15px;
+        width: auto;
+        overflow: hidden; /* This is the 'leash' that keeps everything inside */
+    }
+
+    /* Stacks the grid into a single column for vertical scrolling */
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
     </style>
 </head>
 <body>
