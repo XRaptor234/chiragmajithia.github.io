@@ -37,7 +37,56 @@
         .prompt { color: var(--nebula-purple); }
         .cursor { animation: blink 1s infinite; border-left: 8px solid var(--matrix-green); margin-left: 5px; }
         @keyframes blink { 50% { opacity: 0; } }
-/* --- IMAGE STYLING  --- */
+/* Project Grid Layout */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(109, 40, 217, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card:hover {
+    background: rgba(109, 40, 217, 0.1);
+    border-color: var(--matrix-green);
+    transform: translateY(-5px);
+}
+
+.codepen-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--starlight);
+}
+
+.view-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    border: 1px solid var(--matrix-green);
+    color: var(--matrix-green);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    background: var(--matrix-green);
+    color: var(--space-black);
+}
+        
+        /* --- IMAGE STYLING  --- */
         .career-img { 
             width: 100%; 
             height: 280px; 
@@ -163,6 +212,31 @@
         <div class="card">
             <h3><i class="fab fa-github"></i> Contribution Grid</h3>
             <p>Scanning active repositories...</p>
+            <h2 style="margin: 40px 0 20px 0;"><i class="fas fa-code-branch"></i> Project Logbook</h2>
+<div class="project-grid">
+
+    <div class="project-card">
+        <i class="fab fa-codepen codepen-icon"></i>
+        <h3>Project Alpha</h3>
+        <p style="font-size: 0.9rem; opacity: 0.8;">Interactive UI component built with CSS Grid and animations.</p>
+        <a href="YOUR_CODEPEN_LINK_1" target="_blank" class="view-btn">DECODE PROJECT</a>
+    </div>
+
+    <div class="project-card">
+        <i class="fab fa-codepen codepen-icon"></i>
+        <h3>Project Beta</h3>
+        <p style="font-size: 0.9rem; opacity: 0.8;">A data visualization tool for tracking marketing metrics.</p>
+        <a href="YOUR_CODEPEN_LINK_2" target="_blank" class="view-btn">DECODE PROJECT</a>
+    </div>
+
+    <div class="project-card">
+        <i class="fab fa-codepen codepen-icon"></i>
+        <h3>Project Gamma</h3>
+        <p style="font-size: 0.9rem; opacity: 0.8;">Custom AI prompt engineer interface mockup.</p>
+        <a href="YOUR_CODEPEN_LINK_3" target="_blank" class="view-btn">DECODE PROJECT</a>
+    </div>
+
+</div>
             <div style="background: rgba(255,255,255,0.05); height: 100px; margin-top: 15px; border-radius: 10px; display: flex; align-items: center; justify-content: center; border: 1px dashed rgba(255,255,255,0.2);">
                 [GitHub Activity Map Loading...]
             </div>
