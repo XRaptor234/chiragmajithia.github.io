@@ -85,7 +85,40 @@
     background: var(--matrix-green);
     color: var(--space-black);
 }
-        
+/* Container for the media to keep it tidy */
+.media-container {
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid transparent;
+    transition: all 0.4s ease; /* Smooth transition */
+}
+
+/* The Hover Effect */
+.freelance-card:hover .media-container {
+    border-color: var(--nebula-purple);
+    transform: scale(1.02); /* Slight zoom in */
+    box-shadow: 0 0 20px rgba(109, 40, 217, 0.4); /* Nebula glow */
+}
+
+/* Ensure images/videos inside behave */
+.freelance-card .career-img, 
+.freelance-card video {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    display: block;
+    opacity: 0.8; /* Slightly dim by default */
+    transition: opacity 0.4s ease;
+}
+
+/* Brighten up on hover */
+.freelance-card:hover .career-img,
+.freelance-card:hover video {
+    opacity: 1;
+}        
         /* --- IMAGE STYLING  --- */
         .career-img { 
             width: 100%; 
@@ -282,37 +315,49 @@
 
 </div>
 
-<!-- SECTION: FREELANCE TRANSMISSIONS -->
-<h2 style="margin: 40px 0 20px 0;"><i class="fas fa-briefcase"></i> Freelance Transmissions</h2>
-<div class="project-grid">
+<!-- SECTION: FREELANCE ORBIT -->
+<h2 style="margin: 40px 0 20px 0;"><i class="fas fa-satellite"></i> Freelance Orbit</h2>
+<div class="orbit-container">
 
     <!-- 1. The Instagram Reel -->
-    <div class="project-card" style="border-color: var(--nebula-purple);">
-        <div style="height: 350px; overflow: hidden; border-radius: 8px; background: #000; margin-bottom: 15px;">
-            <video width="100%" height="100%" controls playsinline preload="metadata" style="object-fit: cover;">
-                <source src="PASTE_RAW_VIDEO_URL_HERE" type="video/mp4">
-            </video>
+    <div class="orbit-item">
+        <div class="orbit-marker"></div>
+        <div class="card freelance-card">
+            <span style="color: var(--nebula-purple); font-weight: bold;">Social Media Production</span>
+            <h3>Instagram Reel: Freelance Project</h3>
+            <div class="media-container">
+                <video width="100%" height="100%" controls playsinline preload="metadata">
+                    <source src="PASTE_RAW_VIDEO_URL_HERE" type="video/mp4">
+                </video>
+            </div>
+            <p>High-energy vertical video produced for client engagement.</p>
         </div>
-        <h3>Social Content Reel</h3>
-        <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 0;">Freelance vertical production.</p>
     </div>
 
-    <!-- 2. Freelance Design 1 -->
-    <div class="project-card">
-        <div style="height: 350px; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 8px; background: #111; margin-bottom: 15px;">
-            <img src="https://github.com/XRaptor234/chiragmajithia.github.io/blob/main/1.jpg" style="width: 100%; height: 100%; object-fit: contain;">
+    <!-- 2. Design Asset 1 -->
+    <div class="orbit-item">
+        <div class="orbit-marker"></div>
+        <div class="card freelance-card">
+            <span style="color: var(--starlight); font-weight: bold;">Visual Identity</span>
+            <h3>Freelance Design Asset I</h3>
+            <div class="media-container">
+                <img src="1.jpg" class="career-img">
+            </div>
+            <p>Custom graphic designed to align with client branding.</p>
         </div>
-        <h3>Visual Asset I</h3>
-        <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 0;">Graphic Design / Branding</p>
     </div>
 
-    <!-- 3. Freelance Design 2 -->
-    <div class="project-card">
-        <div style="height: 350px; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 8px; background: #111; margin-bottom: 15px;">
-            <img src="https://github.com/XRaptor234/chiragmajithia.github.io/blob/main/2.jpg" style="width: 100%; height: 100%; object-fit: contain;">
+    <!-- 3. Design Asset 2 -->
+    <div class="orbit-item">
+        <div class="orbit-marker"></div>
+        <div class="card freelance-card">
+            <span style="color: var(--matrix-green); font-weight: bold;">Visual Identity</span>
+            <h3>Freelance Design Asset II</h3>
+            <div class="media-container">
+                <img src="2.jpg" class="career-img">
+            </div>
+            <p>Branding asset developed for freelance delivery.</p>
         </div>
-        <h3>Visual Asset II</h3>
-        <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 0;">Graphic Design / Branding</p>
     </div>
 
 </div>
